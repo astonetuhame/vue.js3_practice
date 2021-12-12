@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="watchers">
+        <input type="radio" value="London" v-model="city">London
+        <input type="radio" value="Nairobi" v-model="city">Nairobi
+        <input type="radio" value="Kampala" v-model="city">Kampala
+        <p><span>{{ city }}: </span>{{ weather_info }}</p>
+    </div>
+
+    <script src="../vue3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
