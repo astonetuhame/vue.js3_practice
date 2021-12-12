@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+        <h1>To Do App</h1>
+        <input type="text" v-model="newItem" @input="check" :placeholder="msg">
+        <span>{{ max-newItem.length }}/{{ max }}</span>
+        <button @click="add" :disabled="newItem.length==0" >Add</button>
+
+        <ul v-if="items.length > 0">
+            <li v-for="(item, index) in items" :key="index">{{ item }}
+                <button @click="remove(index)">delete</button>
+            </li>
+        </ul>
+        <p v-else>Nothing to list</p>
+    </div>
+    
+
+
+    <script src="../vue3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
